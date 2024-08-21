@@ -8,9 +8,6 @@ return {
             scope = {
                 show_start = false,  -- Hide the underline on the first line of the scope
             },
-            indent = {
-                char = '┆',  -- Set the character for indentation guides
-            },
         },
 
   },
