@@ -16,5 +16,12 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Remap 't' to act like 'F' (search backwards)
+vim.keymap.set("n", "t", "F", { noremap = true, silent = true })
+
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>v", [["_dP]])
+
+-- redo set to z
+vim.keymap.set("n", "z", "<C-r>", { noremap = true, silent = true })
+
