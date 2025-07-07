@@ -25,3 +25,20 @@ vim.keymap.set("x", "<leader>v", [["_dP]])
 -- redo set to z
 vim.keymap.set("n", "z", "<C-r>", { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>d', '<cmd>Lspsaga show_line_diagnostics<CR>', { desc = "Show line diagnostics" })
+
+-- Open diagnostics in a floating window
+vim.keymap.set('n', '<leader>d', function()
+  vim.diagnostic.open_float(nil, {
+    focusable = false,
+    border = "rounded",
+    source = "always",
+    prefix = "",
+    scope = "line",
+  })
+end, { desc = "Show diagnostics in floating window" })
+
+
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = "Go to references" })
+
