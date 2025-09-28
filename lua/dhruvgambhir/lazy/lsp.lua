@@ -32,7 +32,6 @@ return {
                 "html",
                 "tailwindcss",
                 "tsserver",
-                "gopls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
